@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k4p-JY-QKT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DudeCar" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="7jW-bI-j5v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="fTd-FJ-s2w"/>
+                        </connections>
+                    </mapView>
+                    <navigationItem key="navigationItem" id="l4Z-Ne-xhG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="arj-Dx-Mqb">
+                            <connections>
+                                <action selector="addButton:" destination="BYZ-38-t0r" id="IHX-kL-Hiv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="arj-Dx-Mqb" id="PkP-rb-VT8"/>
+                        <outlet property="mapView" destination="7jW-bI-j5v" id="8Cv-wm-dtS"/>
+                        <outlet property="searchDisplayController" destination="8fQ-V6-0Ey" id="xfE-Z5-ssV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="8fQ-V6-0Ey">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="zSi-yQ-UIA"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="iaF-zt-cRw"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="QKJ-IN-fL6"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="dKn-e4-HOQ"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1152" y="-540"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qW9-FK-Y3d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k4p-JY-QKT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gW1-tE-42s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eVR-75-VE3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfK-oQ-x2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="-353"/>
+        </scene>
+    </scenes>
+</document>
